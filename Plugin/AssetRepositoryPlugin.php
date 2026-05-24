@@ -35,7 +35,7 @@ class AssetRepositoryPlugin
      * @param Repository $subject
      * @param string     $result URL final del asset
      * @param string     $fileId
-     * @param array      $params
+     * @param array<string, mixed> $params
      * @return string
      */
     public function afterGetUrlWithParams(Repository $subject, $result, $fileId, array $params = [])

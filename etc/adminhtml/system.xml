@@ -4,6 +4,11 @@
 
     <system>
         <section id="gdwcatalog">
+            <group id="gdwcoreabout" type="text" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>About</label>
+                <frontend_model>GDW\Core\Block\Adminhtml\System\Core\GlobalAds</frontend_model>
+            </group>
+            
             <group id="disableimagecache" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Disable Image Cache</label>
                 <resource>GDW_DisableImageCache::config</resource>
