@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Plugin para el helper de imagen de producto -->
+    <type name="Magento\Catalog\Helper\Image">
+        <plugin name="gdw_disableimagecache_image_helper"
+            type="GDW\DisableImageCache\Plugin\ImageHelperPlugin"
+                sortOrder="10"/>
+    </type>
+
+    <!-- Plugin genérico sobre el repositorio de assets para limpiar rutas con /cache/ -->
+    <type name="Magento\Framework\View\Asset\Repository">
+        <plugin name="gdw_disableimagecache_asset_repository"
+            type="GDW\DisableImageCache\Plugin\AssetRepositoryPlugin"
+                sortOrder="20"/>
+    </type>
+
+    <type name="Magento\Catalog\Model\View\Asset\Image">
+        <plugin name="gdw_disableimagecache_image_asset"
+            type="GDW\DisableImageCache\Plugin\ImageAssetPlugin"
+                sortOrder="10"/>
+    </type>
+
+</config>
